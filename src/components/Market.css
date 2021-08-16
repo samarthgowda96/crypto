@@ -1,0 +1,28 @@
+.body{
+    background-color: black;
+}
+.container { 
+    height: 200px;
+    position: relative;
+
+    margin-top: 20em;
+  }
+  
+  .center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  .Btn{
+      width: 1000px;
+      height: 80px;
+     
+  }
+  .title{
+      color: white;
+      text-align: center;
+      font-family: sans-serif;
+  }
