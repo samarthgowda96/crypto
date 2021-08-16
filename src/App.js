@@ -10,6 +10,7 @@ import OrderbookETH from './components/OrderbookETH'
 
 const App=()=>{
   return(
+    //Creating routes to different Component
     <Router>
       <Route exact path='/' component={Market}></Route>
       <Route path='/market'component={Market}></Route>

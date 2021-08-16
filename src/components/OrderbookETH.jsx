@@ -37,10 +37,9 @@ const useStyles = makeStyles((theme)=>({
     },
   }));
   
-
-
-
 const OrderbookBTC=()=>{
+
+    //declaring all the required states
     const classes = useStyles();
     const [asks,setAsks]=useState([])
     const [bids,setBids]=useState([])
@@ -49,7 +48,7 @@ const OrderbookBTC=()=>{
     const [total,setTotal]=useState('0.00')
     const [quantity,setQuantity]=useState('0.00')
 
-    
+    //Making API Request to Coin each milli sec to keep it updated
     useEffect(()=>{
         const getData=async()=>{
             const res= await axios.get('http://api.pro.coinbase.com/products/ETH-BTC/book',{params:{level:2}})
@@ -66,9 +65,9 @@ const OrderbookBTC=()=>{
             
         }
         getData()
-},[])
+})
 
-
+//Handling calculating the price of ETH dynamically
 const handlePriceClick=()=>{
   
   asks.find(item=>{
@@ -101,13 +100,10 @@ const handlePriceClick=()=>{
     }
     
 })
-
-
-  
-  
+ 
 }
    
-    return(
+  return(
     <div>
         <h1 style={{color:"white", textAlign:'center'}}>ORDER BOOK-ETH Market</h1>
         <form className={classes.root} noValidate autoComplete="off">

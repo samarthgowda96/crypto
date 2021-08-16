@@ -5,8 +5,10 @@ import axios from 'axios'
 
 
 import Button from '@material-ui/core/Button';
+
+//Home page to select market
 const Market=()=>{
-    const [selection,setSelection]=useState('BTC_USDC')
+ 
     
     return(
         <div>
@@ -16,7 +18,6 @@ const Market=()=>{
                 <div className="center">
                 <Link to='/btcusdc' >
                     <Button  className="Btn"variant="contained" color="primary">
-                        
                         BTC_USDC
                     </Button>
                     </Link>
